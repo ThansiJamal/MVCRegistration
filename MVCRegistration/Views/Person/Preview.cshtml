@@ -1,0 +1,24 @@
+﻿@model MVCRegistration.Models.Person
+@{
+    ViewBag.Title = "Preview";
+}
+
+<h2>Preview</h2>
+@using (Html.BeginForm("Submit", "Person"))
+{<center>
+        <label>Name: </label>
+        &nbsp;@Html.TextBoxFor(m => m.Name)
+        <br /><br />
+        <label> Place: </label>
+        &nbsp;@Html.TextBoxFor(m => m.Place)
+        <br /><br />
+        <label> Email:</label>
+        &nbsp;&nbsp;@Html.TextBoxFor(m => m.Email)<br /><br />
+        <label> Mobile:</label>
+        @Html.TextBoxFor(m => m.Mobile)
+        <br /><br />
+        <div>
+            <input type="submit" value="Submit"  class="btn btn-primary"  href="/Submit/Person"/>
+        </div>
+    </center>
+}

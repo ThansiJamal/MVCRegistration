@@ -1,0 +1,18 @@
+﻿@model MVCRegistration.Models.Person
+@{
+    ViewBag.Title = "Registration";
+}
+<center>
+    <h2>Registration</h2>
+    @using (Html.BeginForm("Registration", "Person"))
+    {
+        @Html.TextBoxFor(m => m.Name, new { placeholder = "Enter Your Name", @class = "form-control" })<br />
+        @Html.TextBoxFor(m => m.Place, new { placeholder = "Enter Your Place", @class = "form-control" })<br />
+        @Html.TextBoxFor(m => m.Email, new { placeholder = "Enter Your Email Id", @class = "form-control" })<br />
+        @Html.TextBoxFor(m => m.Mobile, new { placeholder = "Enter Your Mobile Number", @class = "form-control" })<br />
+        <div>
+            <input type="submit" value="Registration" class="btn btn-primary" />
+
+        </div>
+    }
+</center>
